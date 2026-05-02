@@ -11,6 +11,7 @@
   </div>
   <div class="mb-3">
     <label for="pwd" class="form-label">Mot de passe</label>
+<<<<<<< HEAD
     <div class="input-group">
       <input type="password" class="form-control" id="pwd" name="pwd" required>
       <button class="btn btn-outline-secondary" type="button" id="togglePwd" title="Afficher / masquer">
@@ -29,3 +30,9 @@ document.getElementById('togglePwd').addEventListener('click', function () {
     this.textContent = isHidden ? '🔓' : '👁';
 });
 </script>
+=======
+    <input type="password" class="form-control" id="pwd" name="pwd" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d

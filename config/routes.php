@@ -2,7 +2,11 @@
 
 include CORE.'Router/Route.php';
 
+<<<<<<< HEAD
 $router->get(new Route('/', 'home/index'));
+=======
+$router->get(new Route('/', 'ticket/index'));
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 $router->get(new Route('/ticket', 'ticket/index'));
 $router->get(new Route('/ticket/show', 'ticket/show'));
 $router->get(new Route('/ticket/new', 'ticket/new'));
@@ -13,6 +17,7 @@ $router->delete(new Route('/ticket/destroy', 'ticket/destroy'));
 
 $router->get(new Route('/login', 'auth/login'));
 $router->post(new Route('/login', 'auth/store'));
+<<<<<<< HEAD
 $router->get(new Route('/logout', 'auth/logout'));
 
 $router->get(new Route('/user', 'user/index'));
@@ -28,3 +33,6 @@ $router->post(new Route('/categorie/store', 'categorie/store'));
 $router->get(new Route('/categorie/edit', 'categorie/edit'));
 $router->patch(new Route('/categorie/update', 'categorie/update'));
 $router->delete(new Route('/categorie/destroy', 'categorie/destroy'));
+=======
+$router->get(new Route('/logout', 'auth/logout'));
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d

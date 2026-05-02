@@ -4,6 +4,7 @@ requireAuth();
 
 include ROOT.'/models/Ticket.php';
 
+<<<<<<< HEAD
 $sessionUser = Session::get('user');
 $profilId    = (int)$sessionUser['profil_id'];
 $ticket      = Ticket::getById((int)($_GET['id'] ?? 0));
@@ -37,3 +38,12 @@ if ($profilId === 2) {
 Ticket::deleteById((int)$ticket['id']);
 
 header('Location: /ticket');
+=======
+$delete = Ticket::deleteById($_GET['id']);
+
+if (! $delete) {
+    die('On a eu un problème');
+}
+
+header('Location: /');
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d

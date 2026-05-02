@@ -4,6 +4,7 @@ requireAuth();
 
 include ROOT.'/models/Ticket.php';
 include ROOT.'/models/Statut.php';
+<<<<<<< HEAD
 include ROOT.'/models/Categorie.php';
 
 $sessionUser = Session::get('user');
@@ -45,3 +46,10 @@ if ($profilId === 1) {
 }
 
 view('/ticket/edit', compact('ticket', 'options', 'profilId', 'categories'));
+=======
+
+$options = Statut::all();
+$ticket = Ticket::getById($_GET['id']);
+
+view('/ticket/edit', compact('ticket', 'options'));
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d

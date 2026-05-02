@@ -1,10 +1,35 @@
 <?php
 
+<<<<<<< HEAD
+=======
+/**
+ * Détermine si l'URL courante correspond à l'une des routes fournies.
+ *
+ * Utilisé pour appliquer la classe CSS `active` sur les liens de navigation.
+ *
+ * @param  array<string> $routesPossibles Liste des chemins URL qui activent le lien.
+ * @return string                         La chaîne 'active' ou une chaîne vide.
+ */
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 function activeHeaderClass(array $routesPossibles): string
 {
     return in_array($_SERVER['PATH_INFO'] ?? '', $routesPossibles) ? 'active' : '';
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Génère le HTML d'un élément de navigation Bootstrap.
+ *
+ * Applique automatiquement la classe `active` si l'URL courante
+ * correspond à l'une des routes fournies.
+ *
+ * @param  array<string> $url   Tableau de chemins URL associés à ce lien ; le premier
+ *                              élément est utilisé comme valeur de l'attribut href.
+ * @param  string        $title Libellé affiché dans le lien.
+ * @return string               Fragment HTML du <li> de navigation.
+ */
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 function menuOption(array $url, string $title): string
 {
     $classe = activeHeaderClass($url);
@@ -16,6 +41,17 @@ function menuOption(array $url, string $title): string
         EOM;
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Redirige vers la page de connexion si l'utilisateur n'est pas authentifié.
+ *
+ * À appeler en début de contrôleur pour protéger les actions réservées
+ * aux utilisateurs connectés. Termine l'exécution après la redirection.
+ *
+ * @return void
+ */
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 function requireAuth(): void
 {
     if (!Session::keyExists('user')) {
@@ -24,6 +60,7 @@ function requireAuth(): void
     }
 }
 
+<<<<<<< HEAD
 function requireAdmin(): void
 {
     requireAuth();
@@ -34,6 +71,21 @@ function requireAdmin(): void
     }
 }
 
+=======
+/**
+ * Rend une vue en l'encapsulant dans le layout principal.
+ *
+ * La vue est capturée via un tampon de sortie (output buffering), puis
+ * injectée dans le layout via la variable $_content.
+ * Les clés du tableau $parametres sont extraites comme variables locales
+ * accessibles dans la vue.
+ *
+ * @param  string        $vue        Chemin relatif de la vue depuis le dossier views/,
+ *                                   sans l'extension .php (ex. : 'article/index').
+ * @param  array<string,mixed> $parametres Variables à transmettre à la vue (clé => valeur).
+ * @return void
+ */
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 function view(string $vue, array $parametres = []): void
 {
     extract($parametres);

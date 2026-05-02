@@ -4,6 +4,7 @@ requireAuth();
 
 include ROOT.'/models/Ticket.php';
 
+<<<<<<< HEAD
 $sessionUser = Session::get('user');
 $profilId    = (int)$sessionUser['profil_id'];
 $id          = (int)($_GET['id'] ?? 0);
@@ -65,3 +66,16 @@ if (!$updt) {
 }
 
 header('Location: /ticket');
+=======
+$updt = Ticket::updateById([
+    'objet'     => $_POST['objet'],
+    'contenu'   => $_POST['contenu'],
+    'idstatut'  => $_POST['idstatut'],
+], $_GET['id']);
+
+if (! $updt) {
+    die('On a eu un problème');
+}
+
+header('Location: /');
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d

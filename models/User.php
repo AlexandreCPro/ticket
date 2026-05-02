@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 include_once CORE.'Model.php';
+=======
+include CORE.'Model.php';
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 
 class User extends Model
 {
@@ -13,6 +17,7 @@ class User extends Model
 
         return $stmt->fetch();
     }
+<<<<<<< HEAD
 
     public static function allWithProfil(): array
     {
@@ -24,4 +29,6 @@ class User extends Model
         );
         return $stmt->fetchAll();
     }
+=======
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 }

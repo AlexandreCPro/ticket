@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 requireAuth();
 
 include ROOT.'/models/Ticket.php';
@@ -19,3 +20,11 @@ if ($profilId === 1) {
 }
 
 view('ticket/index', compact('retourSQL', 'profilId'));
+=======
+// CONTROLEUR
+include ROOT.'/models/Ticket.php';
+
+$retourSQL = Ticket::all();
+
+view('ticket/index', compact('retourSQL')); // ['retourSQL'=>$retourSQL]
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d

@@ -2,13 +2,21 @@
 <html lang="en" data-bs-theme="auto">
 
 <head>
+<<<<<<< HEAD
   <title>Ticket AutoMoto</title>
+=======
+  <title>Ticket</title>
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 </head>
 
 <body class="bg-body-tertiary">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
+<<<<<<< HEAD
       <a class="navbar-brand" href="/">AutoMoto</a>
+=======
+      <a class="navbar-brand" href="/">Ticket</a>
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
 
       <button
         class="navbar-toggler"
@@ -23,11 +31,16 @@
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
+<<<<<<< HEAD
           <?= menuOption(['/ticket'], 'Tickets') ?>
           <?= menuOption(['/categorie'], 'Catégories') ?>
           <?php if (Session::get('user') && (int)Session::get('user')['profil_id'] === 1): ?>
             <?= menuOption(['/user'], 'Utilisateurs') ?>
           <?php endif; ?>
+=======
+          <?= menuOption(['/ticket', '/', ''], 'Tickets') ?>
+          <?= menuOption(['/categorie'], 'Catégories') ?>
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
           <?php if (Session::get('user')): ?>

@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 requireAuth();
 
 include ROOT.'/models/Ticket.php';
@@ -30,3 +31,10 @@ if ($profilId === 2) {
 }
 
 view('/ticket/show', compact('ticket', 'profilId'));
+=======
+include ROOT.'/models/Ticket.php';
+
+$ticket = Ticket::getById($_GET['id']);
+
+view('/ticket/show', compact('ticket'));
+>>>>>>> f0abff02462bb8d21725cbc000d603610d061a6d
