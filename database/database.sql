@@ -79,7 +79,7 @@ CREATE TABLE `categories` (
   `nom_categorie` varchar(255) NOT NULL,
   `description` text DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,7 +88,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Matériel informatique','Problème avec un ordinateur, écran, imprimante...'),(2,'Logiciel / Application','Bug ou demande d\'installation d\'un logiciel métier.'),(3,'Réseau / Connexion','Problème Internet, réseau local, Wi-Fi ou VPN.'),(4,'Téléphonie','Téléphone fixe, mobile ou messagerie vocale.'),(5,'Accès / Droits','Création de compte, mot de passe ou droits d\'accès.'),(6,'Autre','Toute autre demande ne correspondant pas aux catégories.');
+INSERT INTO `categories` VALUES (1,'Matériel informatique','Problème avec un ordinateur, écran, imprimante...'),(2,'Logiciel / Application','Bug ou demande d\'installation d\'un logiciel métier.'),(3,'Réseau / Connexion','Problème Internet, réseau local, Wi-Fi ou VPN.'),(4,'Téléphonie','Téléphone fixe, mobile ou messagerie vocale.'),(5,'Accès / Droits','Création de compte, mot de passe ou droits d\'accès.'),(6,'Autre','Toute autre demande ne correspondant pas aux catégories.'),(7,'une chose','');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +161,7 @@ CREATE TABLE `tickets` (
   CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `users` (`id`),
   CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`idstatut`) REFERENCES `statut` (`id`),
   CONSTRAINT `tickets_ibfk_3` FOREIGN KEY (`idcategorie`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,7 +170,7 @@ CREATE TABLE `tickets` (
 
 LOCK TABLES `tickets` WRITE;
 /*!40000 ALTER TABLE `tickets` DISABLE KEYS */;
-INSERT INTO `tickets` VALUES (15,'test brive','ahah beh',3,2,6),(16,'test Limoges','ahah',4,2,3),(17,'test 2','hahahahahaha',4,2,2);
+INSERT INTO `tickets` VALUES (15,'test brive','ahah beh',3,2,6),(16,'test Limoges','ahah',4,2,3),(17,'test 2','hahahahahaha jlvuihgvy',4,3,2);
 /*!40000 ALTER TABLE `tickets` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,4 +214,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-03  1:55:55
+-- Dump completed on 2026-10-05 17:28:40
